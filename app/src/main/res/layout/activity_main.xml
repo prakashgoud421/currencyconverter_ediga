@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <Spinner
+        android:layout_width="match_parent"
+        android:padding="30dp"
+        android:background="@drawable/recatngle_border"
+        android:scrollbarStyle="outsideOverlay"
+        android:id="@+id/currency_selector"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/enterAmount"
+        android:background="@color/colorAccent"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:hint="Enter Amount"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/currency_selector"
+        android:textSize="24dp">
+    </EditText>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="gone"
+        android:layout_margin="50dp"
+        android:layout_below="@id/enterAmount"
+        android:background="@drawable/circle_shape"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="65"
+        android:progressDrawable="@drawable/circular_progress_bar" />
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_below="@+id/enterAmount"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dp"
+        android:columnWidth="100dp"
+        android:drawSelectorOnTop="true"
+        android:gravity="center"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp"
+        android:horizontalSpacing="5dp"
+        android:focusable="true"
+        android:clickable="true"/>
+</RelativeLayout>
